@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{798D065D-38F5-43B2-8751-9C1C293B55AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>ClientWPF</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E1A4A74AD251F11E3778CBEED2A794A3D1E5CB93</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ClientWPF_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EducationLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EducationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphicLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GraphicLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="SoundLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SoundLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Battle\BattleCanvas.cs" />
+    <Compile Include="Battle\BattleController.cs" />
+    <Compile Include="Battle\BattleField.cs" />
+    <Compile Include="Battle\BattleMoveConverter.cs" />
+    <Compile Include="Battle\BattleParams.cs" />
+    <Compile Include="Battle\BattleWeapon.cs" />
+    <Compile Include="Battle\Hex.cs" />
+    <Compile Include="Battle\HexCanvas.cs" />
+    <Compile Include="Battle\HexCanvasBrushes.cs" />
+    <Compile Include="Battle\HexShipStatus.cs" />
+    <Compile Include="Battle\HexShip.cs" />
+    <Compile Include="Battle\ImageShipModel.cs" />
+    <Compile Include="Battle\NameCreator.cs" />
+    <Compile Include="Battle\PanelB2.cs" />
+    <Compile Include="Battle\RoundIndicator.cs" />
+    <Compile Include="Battle\SecondaryEffect.cs" />
+    <Compile Include="Battle\ShipB.cs" />
+    <Compile Include="Battle\ShipBrushes.cs" />
+    <Compile Include="Battle\ShipModel.cs" />
+    <Compile Include="Battle\ShipPanel.cs" />
+    <Compile Include="Battle\ShipPanel2.cs" />
+    <Compile Include="Battle\ShipParamClass.cs" />
+    <Compile Include="Battle\ShipStatus.cs" />
+    <Compile Include="Battle\Shoots\AntiAnim.cs" />
+    <Compile Include="Battle\Shoots\CannonAnim.cs" />
+    <Compile Include="Battle\Shoots\DarkAnim.cs" />
+    <Compile Include="Battle\Shoots\DroneAnim.cs" />
+    <Compile Include="Battle\Shoots\EMIAnim.cs" />
+    <Compile Include="Battle\Shoots\GaussAnim.cs" />
+    <Compile Include="Battle\Shoots\LaserAnim.cs" />
+    <Compile Include="Battle\Shoots\MagnetAnim.cs" />
+    <Compile Include="Battle\Shoots\MissleAnim.cs" />
+    <Compile Include="Battle\Shoots\PlasmaAnim.cs" />
+    <Compile Include="Battle\Shoots\PsiAnim.cs" />
+    <Compile Include="Battle\Shoots\RadAnim.cs" />
+    <Compile Include="Battle\Shoots\ShootAnim.cs" />
+    <Compile Include="Battle\Shoots\SliceAnim.cs" />
+    <Compile Include="Battle\Shoots\SolarAnim.cs" />
+    <Compile Include="Battle\Shoots\TimeAnim.cs" />
+    <Compile Include="Battle\Shoots\WarpAnim.cs" />
+    <Compile Include="Battle\Side.cs" />
+    <Compile Include="Battle\StatsCanvas.cs" />
+    <Compile Include="Battle\TestBattle.cs" />
+    <Compile Include="Battle\TimeIndicator.cs" />
+    <Compile Include="CommonC\Abilities.cs" />
+    <Compile Include="CommonC\ByteMessage.cs" />
+    <Compile Include="CommonC\Commands.cs" />
+    <Compile Include="CommonC\Controller.cs" />
+    <Compile Include="CommonC\Enums.cs" />
+    <Compile Include="CommonC\Events.cs" />
+    <Compile Include="CommonC\GameObjectName.cs" />
+    <Compile Include="CommonC\GSArchive.cs" />
+    <Compile Include="CommonC\Help.cs" />
+    <Compile Include="CommonC\Interface.cs" />
+    <Compile Include="CommonC\Pictogram.cs" />
+    <Compile Include="CommonC\Premium.cs" />
+    <Compile Include="CommonC\SchemeGenerator.cs" />
+    <Compile Include="CommonC\SoundPlayer.cs" />
+    <Compile Include="CommonC\Sounds.cs" />
+    <Compile Include="CommonC\StoryLine.cs" />
+    <Compile Include="Education\BattleLessonCanvas.cs" />
+    <Compile Include="GameO\Artefact.cs" />
+    <Compile Include="GameO\ChatMessage.cs" />
+    <Compile Include="GameO\GameNotice.cs" />
+    <Compile Include="GameO\GSBuilding.cs" />
+    <Compile Include="GameO\GSBuilding2.cs" />
+    <Compile Include="GameO\GSClan.cs" />
+    <Compile Include="GameO\GSFleet.cs" />
+    <Compile Include="GameO\GSPilot.cs" />
+    <Compile Include="GameO\GSPlanet.cs" />
+    <Compile Include="GameO\GSShip.cs" />
+    <Compile Include="GameO\GSStar.cs" />
+    <Compile Include="GameO\Land.cs" />
+    <Compile Include="GameO\Mission.cs" />
+    <Compile Include="GameO\Avanpost.cs" />
+    <Compile Include="GameO\ScienceAnalys.cs" />
+    <Compile Include="CommonC\Const.cs" />
+    <Compile Include="CommonC\Crypt.cs" />
+    <Compile Include="GameO\GameScience.cs" />
+    <Compile Include="CommonC\Gets.cs" />
+    <Compile Include="CommonC\GSGameInfo.cs" />
+    <Compile Include="CommonC\GSMessage.cs" />
+    <Compile Include="GameO\SciencePrice.cs" />
+    <Compile Include="GameO\ShipsParameters.cs" />
+    <Compile Include="Interfaces\ILoginInterface.cs" />
+    <Compile Include="Battle\Battle.cs" />
+    <Compile Include="InterfO\AvanpostPanel.cs" />
+    <Compile Include="InterfO\BrightText.cs" />
+    <Compile Include="InterfO\Colony_Info.cs" />
+    <Compile Include="InterfO\FleetsPanel.cs" />
+    <Compile Include="InterfO\LandInfo.cs" />
+    <Compile Include="InterfO\Second\BattlePanel.cs" />
+    <Compile Include="InterfO\ChatPanel.cs" />
+    <Compile Include="InterfO\Second\Diod.cs" />
+    <Compile Include="InterfO\Second\ErrorMessage.cs" />
+    <Compile Include="InterfO\GalaxyPanel.cs" />
+    <Compile Include="InterfO\Second\GameObjectImage.cs" />
+    <Compile Include="InterfO\Second\HelpWindow.cs" />
+    <Compile Include="InterfO\Second\LoadWindow.cs" />
+    <Compile Include="InterfO\Second\PilotsListPanel.cs" />
+    <Compile Include="InterfO\Second\Premium_Coin.cs" />
+    <Compile Include="InterfO\Second\Quest.cs" />
+    <Compile Include="InterfO\Second\RoundButtons.cs" />
+    <Compile Include="InterfO\SectorCreate.cs" />
+    <Compile Include="InterfO\SectorPanel.cs" />
+    <Compile Include="InterfO\Second\SelectItemCanvas.cs" />
+    <Compile Include="InterfO\Second\SelectSchemaNameCanvas.cs" />
+    <Compile Include="InterfO\Second\ShipCustomizePanel.cs" />
+    <Compile Include="InterfO\ShipsPanel.cs" />
+    <Compile Include="InterfO\StellarPanel.cs" />
+    <Compile Include="InterfO\Second\WeapCanvas.cs" />
+    <Compile Include="MessageComment.cs" />
+    <Compile Include="CommonC\PlayerSciencesList.cs" />
+    <Page Include="Windows\DebugWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonC\Common.cs" />
+    <Compile Include="Links.cs" />
+    <Compile Include="PopUpCanvas.cs" />
+    <Compile Include="Server\AI.cs" />
+    <Compile Include="Server\BattleEvents.cs" />
+    <Compile Include="Server\BattleGenerator.cs" />
+    <Compile Include="Server\Enemy.cs" />
+    <Compile Include="Server\FShipEship.cs" />
+    <Compile Include="Server\GSAccount.cs" />
+    <Compile Include="Server\GSGameEvent.cs" />
+    <Compile Include="Server\GSMarket.cs" />
+    <Compile Include="Server\GSPlayer.cs" />
+    <Compile Include="Server\GSPlayerMissions.cs" />
+    <Compile Include="Server\GSPlayerOthers.cs" />
+    <Compile Include="Server\GSTimer.cs" />
+    <Compile Include="Server\LocalServer.cs" />
+    <Compile Include="Server\Mission2.cs" />
+    <Compile Include="Server\MissionInspector.cs" />
+    <Compile Include="Server\SchemaGenForMarket.cs" />
+    <Compile Include="Server\ServerBattle.cs" />
+    <Compile Include="Server\ServerBattleParams.cs" />
+    <Compile Include="Server\ServerBattleWeapon.cs" />
+    <Compile Include="Server\ServerCommon.cs" />
+    <Compile Include="Server\ServerFleet.cs" />
+    <Compile Include="Server\ServerGameNotice.cs" />
+    <Compile Include="Server\ServerLand.cs" />
+    <Compile Include="Server\ServerLinks.cs" />
+    <Compile Include="Server\ServerMarket.cs" />
+    <Compile Include="Server\ServerPlanet.cs" />
+    <Compile Include="Server\ServerPremium.cs" />
+    <Compile Include="Server\ServerQuest.cs" />
+    <Compile Include="Server\ServerSchemeGenerator.cs" />
+    <Compile Include="Server\ServerSecondaryEffect.cs" />
+    <Compile Include="Server\ServerShip.cs" />
+    <Compile Include="Server\ServerShipB.cs" />
+    <Compile Include="Server\ServerSide.cs" />
+    <Compile Include="Server\ServerStar.cs" />
+    <Compile Include="Server\ServerClan.cs" />
+    <Compile Include="Server\ServerTestBattle.cs" />
+    <Compile Include="ShipParts\AbstractandInterfaces.cs" />
+    <Compile Include="ShipParts\Computerclass.cs" />
+    <Compile Include="ShipParts\Engineclass.cs" />
+    <Compile Include="ShipParts\Equipmentclass.cs" />
+    <Compile Include="ShipParts\Generatorclass.cs" />
+    <Compile Include="ShipParts\Schema.cs" />
+    <Compile Include="ShipParts\SchemaImage.cs" />
+    <Compile Include="ShipParts\Shieldclass.cs" />
+    <Compile Include="ShipParts\ShipTypeclass.cs" />
+    <Compile Include="ShipParts\Weaponclass.cs" />
+    <Compile Include="ShipParts\WeaponParams.cs" />
+    <Compile Include="Version2\ArtefactsCanvas.cs" />
+    <Compile Include="Version2\ClansCanvas.cs" />
+    <Compile Include="Version2\Colonies.cs" />
+    <Compile Include="Version2\ElementsCanvas.cs" />
+    <Compile Include="Version2\FleetsCanvas.cs" />
+    <Compile Include="Version2\Galaxy.cs" />
+    <Compile Include="Version2\GlobalCanvasBtn.cs" />
+    <Compile Include="Version2\IntBoya.cs" />
+    <Compile Include="Version2\LandChanger.cs" />
+    <Compile Include="Version2\LoginCanvas.cs" />
+    <Compile Include="Version2\MainButton.cs" />
+    <Compile Include="Version2\MainCanvas.cs" />
+    <Compile Include="Version2\Market.cs" />
+    <Compile Include="Version2\Nation.cs" />
+    <Compile Include="Version2\NewMarket.cs" />
+    <Compile Include="Version2\NewSchemasCanvas.cs" />
+    <Compile Include="Version2\SchemasCanvas.cs" />
+    <Compile Include="Version2\Science2Canvas.cs" />
+    <Compile Include="Version2\Science3Canvas.cs" />
+    <Compile Include="Version2\ScienceCanvas.cs" />
+    <Compile Include="Version2\ShipCreateNew.cs" />
+    <Compile Include="Version2\ShipsCanvas.cs" />
+    <Compile Include="Version2\RandomBattleCanvas.cs" />
+    <Compile Include="Windows\DebugWindow.xaml.cs">
+      <DependentUpon>DebugWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClientWPF_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="resources\12227.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="ShipParts\MainWindowPanels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Agru.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль Microsoft .NET Framework 4 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\tree.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\personazh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Icon2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\BtnAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Cur1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Cur2.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Cur3.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Cur4.cur" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
